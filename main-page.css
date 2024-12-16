@@ -58,7 +58,7 @@ body {
 }
 
 .intro-text .highlight {
-    color: #c940ff; /* Highlight color for "Bryce" */
+    color: #c940ff; 
     font-weight: 700;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 25px rgba(166, 64, 255, 0.5);
     transition: transform 0.3s, color 0.3s;
@@ -66,10 +66,10 @@ body {
 
 .intro-text .highlight:hover {
     transform: scale(1.1);
-    color: #ffffff; /* Change color on hover */
+    color: #ffffff; 
 }
 
-/* Paragraph */
+
 .right-container p {
     font-size: 16px;
     color: #b0b0b0;
