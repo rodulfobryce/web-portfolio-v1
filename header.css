@@ -3,21 +3,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 20px; 
-    background: linear-gradient(145deg, #1a1a1a, #0d0d0d); 
-    border-radius: 8px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(5px); 
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .navbar a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 15px; 
-    font-size: 16px; 
-    font-weight: 500; 
-    letter-spacing: 0.5px; 
-    transition: color 0.3s, transform 0.3s; 
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s, transform 0.3s;
     position: relative;
 }
 
@@ -26,30 +26,135 @@
     display: block;
     width: 100%;
     height: 2px;
-    background: rgba(182, 54, 245, 0.5); 
+    background: rgba(182, 54, 245, 0.5);
     position: absolute;
     left: 0;
-    bottom: -5px; 
-    transform: scaleX(0); 
-    transition: transform 0.3s; 
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
 }
 
 .navbar a:hover {
-    color: #b228f2; 
-    transform: translateY(-2px); 
+    color: #b228f2;
+    transform: translateY(-2px);
 }
 
 .navbar a:hover::after {
-    transform: scaleX(1); 
+    transform: scaleX(1);
 }
 
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
+
     .navbar a {
         margin: 10px 0;
+    }
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3a3a3a;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+.contact-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c940ff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #a82ae0;
+}
+
+/* Programming Skills Section */
+.programming-skills {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    background-color: #3a3a3a;
+}
+
+.skill i {
+    font-size: 40px;
+    color: #c940ff;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progress {
+    background-color: #c940ff;
+    height: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
     }
 }
