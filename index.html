@@ -4,207 +4,342 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfolio</title>
-    <!-- header css -->
-    <link rel="stylesheet" href="header.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="main-page.css">
+    <title>Bryce Rodulfo | Portfolio</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main-page.css" />
+    <!-- CSS -->
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <header class="navbar">
-        <a href="#internships">Internships</a>
-        <a href="#programming-skills">Skills</a>
-        <a href="#organizations">Organizations</a>
-        <a href="#academics">Academics</a>
-        <a href="#reflections">Reflections</a>
-        <a href="#certifications">Certifications</a>
+    <header>
+        <nav class="navbar container">
+            <div class="nav-brand">BR</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#career-highlights">Highlights</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#organizations">Organizations</a>
+                <a href="#academics">Academics</a>
+                <a href="#certifications">Certifications</a>
+            </div>
+        </nav>
     </header>
-    <main class="main-container">
-        <div class="left-container">
-            <img src="1.png" alt="Profile Picture" />
-        </div>
-        <div class="right-container">
-            <h1 class="intro-text">Hi! My Name is <span class="highlight">Bryce</span></h1>
-            <p>I am a soon-to-graduate college student pursuing a Bachelor of Science in Information Systems. I have a
-                keen interest in Web Development and other related fields.</p>
-        </div>
-    </main>
-    <section class="career-highlights" id="career-highlights">
-        <h2>Degree Highlights</h2>
-        <div class="cards">
-            <div class="card">
-                <img alt="hackathon" src="h-1.png" />
-                <div class="card-content">
-                    <h3>HackFest 2023 - Ateneo</h3>
-                    <p>Developing an Application via hackathon against local schools</p>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi! I'm <span class="highlight">Bryce Rodulfo</span></h1>
+                    <br>
+                    <p>I am a graduate of <b>De La Salle–College of Saint Benilde</b> with a <b>Bachelor of Science in
+                            Information Systems</b>, complemented by an elective focus in Data Science. I am passionate
+                        about leveraging data-driven insights to drive innovation and meaningful solutions.</p>
+                    <p>I am passionate about data science and analytics and aim to build a career in this field. I enjoy
+                        uncovering insights from data and using them to guide decisions and create meaningful impact.
+                    </p>
+                    <a href="#career-highlights" class="btn">View My Work</a>
                 </div>
-                <div class="card-footer">
-                    <i class="fas fa-code"></i>
-                    <span>Google Developers Students Club - Benilde</span>
+                <div class="hero-image">
+                    <img src="1.png" alt="Bryce Rodulfo">
+                    <div class="hero-social">
+                        <p>Data Science and Analytics</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/brycerodulfo/" target="_blank" class="social-link"
+                                data-tooltip="Facebook Profile">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bruhyze/" target="_blank" class="social-link"
+                                data-tooltip="Instagram Profile">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/brycerodulfo/" target="_blank" class="social-link"
+                                data-tooltip="LinkedIn Profile">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://drive.google.com/drive/u/2/folders/1OM8AIcBzS0T1_QJgEZLsKxxRn1hl3U_V"
+                                target="_blank" class="social-link" data-tooltip="Resume and CV">
+                                <i class="fab fa-google-drive"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img alt="Internships cover image" src="h-2.png" />
-                <div class="card-content">
+        </div>
+    </section>
+
+    <!-- Career Highlights -->
+    <section id="career-highlights" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Career Highlights</h2>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="h-1.png" alt="HackFest 2023">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>HackFest 2023 - Ateneo</h3>
+                        <p>Developed an application via hackathon against local schools</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <i class="fas fa-code"></i>
+                        <span>Google Developers Students Club - Benilde</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="h-2.png" alt="ChinaBank Internship">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>ChinaBank Internship</h3>
+                        <p>QA & OutSystems Developer</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <i class="fas fa-briefcase"></i>
+                        <span>PCCI - ADSD</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="h-3.png" alt="Plaque Of Recognition">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>Plaque Of Recognition</h3>
+                        <p>Maintained a specified GPA for consecutive terms</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <i class="fas fa-award"></i>
+                        <span>De La-Salle College of St. Benilde</span>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="h-4.png" alt="Benilde Hacks 2021">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>Benilde Hacks 2021</h3>
+                        <p>2nd Place - Information Systems Hackathon</p>
+                    </div>
+                    <div class="highlight-footer">
+                        <i class="fas fa-trophy"></i>
+                        <span>Association of Information Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square skill-icon"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-react skill-icon"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind skill-icon"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bootstrap skill-icon"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python skill-icon"></i>
+                            <span>Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Database -->
+                <div class="skill-category">
+                    <h3>Backend & Database</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span>MSSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js skill-icon"></i>
+                            <span>Node.js</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Tools -->
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-github skill-icon"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar skill-icon"></i>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie skill-icon"></i>
+                            <span>Tableau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Productivity -->
+                <div class="skill-category">
+                    <h3>Design & Productivity</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-figma skill-icon"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-adobe skill-icon"></i>
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-adobe skill-icon"></i>
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-excel skill-icon"></i>
+                            <span>MS Office</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-users skill-icon"></i>
+                            <span>Microsoft Teams</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sticky-note skill-icon"></i>
+                            <span>Notion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="experience-card">
+                <div class="experience-header">
                     <h3>ChinaBank Internship</h3>
-                    <p>QA & OutSystems Developer</p>
                 </div>
-                <div class="card-footer">
-                    <i class="fas fa-briefcase"></i>
-                    <span>PCCI - ADSD</span>
-                </div>
-            </div>
-            <div class="card">
-                <img alt="Design projects cover image" src="h-3.png" />
-                <div class="card-content">
-                    <h3>Plaque Of Recognition</h3>
-                    <p>Maintaining a specified GPA for consecutive terms</p>
-                </div>
-                <div class="card-footer">
-                    <i class="fas fa-briefcase"></i>
-                    <span>De La-Salle College of St. Benilde</span>
-                </div>
-            </div>
-            <div class="card">
-                <img alt="Reflections cover image" src="h-4.png" />
-                <div class="card-content">
-                    <h3>Benilde Hacks 2021</h3>
-                    <p>2nd Place - Information Systems Hackathon</p>
-                </div>
-                <div class="card-footer">
-                    <i class="fas fa-code"></i>
-                    <span>Association of Information Management</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="programming-skills" id="programming-skills">
-        <h2>Programming Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Front-end and Libraries</h3>
-                <div class="skills-grid">
-                    <div class="skill">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML</span>
+                <div class="experience-content">
+                    <div>
+                        <h4>Internship Description</h4>
+                        <p>The internship introduced me to OutSystems, a low-code platform unfamiliar to me. Despite
+                            initial
+                            struggles, I used online courses and documentation to understand its fundamentals,
+                            particularly
+                            CRUD operations and workflows. My work combined testing and development, offering insights
+                            into
+                            the application and user experience. The project was large-scale, with complex
+                            functionalities
+                            requiring critical thinking and adaptability. The team provided guidance and support,
+                            creating
+                            an environment where I could learn and contribute meaningfully.</p>
                     </div>
-                    <div class="skill">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-bootstrap"></i>
-                        <span>Bootstrap</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>Tailwind CSS</span>
+                    <div>
+                        <h4>My Roles</h4>
+                        <div class="role">
+                            <h5>Quality Assurance/Software Tester</h5>
+                            <ul>
+                                <li>Created test case documents and data dictionaries.</li>
+                                <li>Conducted system testing for the Appraisal/Property Transfer System.</li>
+                                <li>Identified bugs, reported issues, and analyzed system functionalities.</li>
+                            </ul>
+                        </div>
+                        <div class="role">
+                            <h5>Outsystems Developer</h5>
+                            <ul>
+                                <li>Fixed system bugs and implemented new functionalities.</li>
+                                <li>Analyzed and understood different development styles within the team.</li>
+                                <li>Attended client meetings to gather feedback and improve the application.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Backend and Database</h3>
-                <div class="skills-grid">
-                    <div class="skill">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fas fa-database"></i>
-                        <span>SQL</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fab fa-python"></i>
-                        <span>Python (Flask)</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fa fa-database"></i>
-                        <span>MongoDB</span>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Others</h3>
-                <div class="skills-grid">
-                    <div class="skill">
-                        <i class="fab fa-github"></i>
-                        <span>Github / Git</span>
-                    </div>
-                    <div class="skill">
-                        <i class="fa fa-database"></i>
-                        <span>PowerBi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="internships" id="internships">
-        <h2>Internships</h2>
-        <div class="internship-card">
-            <h3>ChinaBank Internship</h3>
-            <div class="internship-details">
-                <div class="internship-description">
-                    <h4>Internship Description</h4>
-                    <p>The internship introduced me to OutSystems, a low-code platform unfamiliar to me. Despite initial
-                        struggles, I used online courses and documentation to understand its fundamentals, particularly
-                        CRUD operations and workflows. My work combined testing and development, offering insights into
-                        the application and user experience. The project was large-scale, with complex functionalities
-                        requiring critical thinking and adaptability. The team provided guidance and support, creating
-                        an environment where I could learn and contribute meaningfully.</p>
-                </div>
-                <div class="my-roles">
-                    <h4>My Roles</h4>
-                    <ul>
-                        <h2>Quality Assurance/Software Tester</h2>
-                        <ul>
-                            <li>Created test case documents and data dictionaries.</li>
-                            <li>Conducted system testing for the Appraisal/Property Transfer System.</li>
-                            <li>Identified bugs, reported issues, and analyzed system functionalities.</li>
-                        </ul>
-                        </li>
-                        <h2>Outsystems Developer</h2>
-                        <ul>
-                            <li>Fixed system bugs and implemented new functionalities.</li>
-                            <li>Analyzed and understood different development styles within the team.</li>
-                            <li>Attended client meetings to gather feedback and improve the application.</li>
-                        </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gallery">
+                <div>
                     <h4>Gallery</h4>
-                    <div class="gallery-container">
+                    <div class="experience-gallery">
                         <div class="gallery-item">
-                            <img src="int-1.png" alt="Internship Image 1" />
+                            <img src="int-1.png" alt="Internship Image 1">
                         </div>
                         <div class="gallery-item">
-                            <img src="int-2.png" alt="Internship Image 2" />
+                            <img src="int-2.png" alt="Internship Image 2">
                         </div>
                         <div class="gallery-item">
-                            <img src="int-3.png" alt="Internship Image 3" />
+                            <img src="int-3.png" alt="Internship Image 3">
                         </div>
                         <div class="gallery-item">
-                            <img src="int-4.png" alt="Internship Image 4" />
+                            <img src="int-4.png" alt="Internship Image 4">
                         </div>
                     </div>
                 </div>
-                <div class="experience">
-                    <h4>Experience</h4>
+                <div class="experience-reflection"><br>
+                    <h4>Experience Reflection</h4>
                     <p>This internship was a challenging yet rewarding experience that pushed me to learn new tools and
                         adapt to a professional environment. I felt like an integral team member rather than just an
                         intern, gaining valuable skills in problem-solving, teamwork, and system analysis. However, I
@@ -216,12 +351,20 @@
             </div>
         </div>
     </section>
-    <section class="organizations" id="organizations">
-        <h2>Organizations</h2>
-        <div class="organization-card">
-            <img src="org-logo-1.png" alt="Google Developers Students Club" class="organization-image" />
-            <h3>Google Developers Students Club - Benilde</h3>
-            <div class="organization-details">
+
+    <!-- Organizations Section -->
+    <section id="organizations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Organizations</h2>
+            </div>
+            <div class="organization-card">
+                <div class="organization-header">
+                    <img src="org-logo-1.png" alt="GDSC Logo" class="organization-logo">
+                    <div>
+                        <h3>Google Developers Students Club - Benilde</h3>
+                    </div>
+                </div>
                 <div class="organization-description">
                     <h4>Organization Description</h4>
                     <p>The Google Developers Students Club at Benilde is a community of students passionate about
@@ -237,23 +380,25 @@
                         programming skills by joining local and international workshops / webinars / sessions that are
                         partnered with my organization.</p>
                 </div>
-                <div class="gallery">
+                <div>
                     <h4>Gallery</h4>
-                    <div class="gallery-container">
+                    <div class="experience-gallery">
                         <div class="gallery-item">
-                            <img src="gdsc-1.png" alt="Organization Image 1" />
+                            <img src="gdsc-1.png" alt="GDSC Image 1">
                         </div>
                         <div class="gallery-item">
-                            <img src="gdsc-2.png" alt="Organization Image 2" />
+                            <img src="gdsc-2.png" alt="GDSC Image 2">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="organization-card">
-            <img src="org-logo-2.png" alt="Association of Information Management" class="organization-image" />
-            <h3>Association of Information Management</h3>
-            <div class="organization-details">
+            <div class="organization-card">
+                <div class="organization-header">
+                    <img src="org-logo-2.png" alt="AIM Logo" class="organization-logo">
+                    <div>
+                        <h3>Association of Information Management</h3>
+                    </div>
+                </div>
                 <div class="organization-description">
                     <h4>Organization Description</h4>
                     <p>The Association of Information Management is a student organization that aims to enhance the
@@ -265,119 +410,165 @@
                         workshops, events, and announcements. I also actively participated in organization events to
                         deepen my understanding of my degree program and enhance my programming skills.</p>
                 </div>
-                <div class="gallery">
+                <div>
                     <h4>Gallery</h4>
-                    <div class="gallery-container">
+                    <div class="experience-gallery">
                         <div class="gallery-item">
-                            <img src="aim-1.png" alt="Organization Image 5" />
+                            <img src="aim-1.png" alt="AIM Image 1">
                         </div>
                         <div class="gallery-item">
-                            <img src="aim-2.png" alt="Organization Image 6" />
+                            <img src="aim-2.png" alt="AIM Image 2">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="academics" id="academics">
-        <h2>Academics</h2>
-        <div class="academic-details">
-            <p>Throughout my college journey, pursuing a Bachelor of Science in Information Systems has been both
-                challenging and rewarding. The program equipped me with technical skills, such as programming, database
-                management, and systems analysis, while also honing my soft skills like critical thinking, teamwork, and
-                communication. Participating in projects and hackathons allowed me to apply theoretical knowledge to
-                real-world problems, preparing me for the professional world. These experiences have solidified my
-                passion for technology and its applications in solving modern challenges.</p>
-            <p>As related to my Recognition of Plaque for reaching certain GPA Throughout the term, I have also received
-                Certifications of Deans List throughout my academic year for 2 1/2 years.</p>
-            <p>Below are samples of outputs that I have done in degree's programming subjects, they are related to Data
-                Structures and Algorithms, Android Development in using Email API, and as well as our Capstone where we
-                create a Scholarship Finding Web-Application.</p>
-            <div class="academic-gallery">
-                <h4>Academic Gallery</h4>
-                <div class="academic-gallery-container">
-                    <div class="academic-gallery-item">
-                        <img src="acad-1.png" alt="Academic Image 1" />
-                    </div>
-                    <div class="academic-gallery-item">
-                        <img src="acads-2.png" alt="Academic Image 2" />
-                    </div>
-                    <div class="academic-gallery-item">
-                        <img src="acad-3.png" alt="Academic Image 3" />
+
+    <!-- Academics Section -->
+    <section id="academics" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Journey</h2>
+            </div>
+            <div class="academic-content">
+                <p>Throughout my college journey, pursuing a Bachelor of Science in Information Systems has been both
+                    challenging and rewarding. The program equipped me with technical skills, such as programming,
+                    database
+                    management, and systems analysis, while also honing my soft skills like critical thinking, teamwork,
+                    and
+                    communication. Participating in projects and hackathons allowed me to apply theoretical knowledge to
+                    real-world problems, preparing me for the professional world. These experiences have solidified my
+                    passion for technology and its applications in solving modern challenges.</p>
+                <p>As related to my Recognition of Plaque for reaching certain GPA Throughout the term, I have also
+                    received
+                    Certifications of Deans List throughout my academic year for 2 1/2 years.</p>
+                <p>Below are samples of outputs that I have done in degree's programming subjects, they are related to
+                    Data
+                    Structures and Algorithms, Android Development in using Email API, and as well as our Capstone where
+                    we
+                    create a Scholarship Finding Web-Application.</p>
+                <div class="academic-gallery">
+                    <h4>Academic Projects</h4>
+                    <div class="experience-gallery">
+                        <div class="gallery-item">
+                            <img src="acad-1.png" alt="Academic Project 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="acads-2.png" alt="Academic Project 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="acad-3.png" alt="Academic Project 3">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="certifications" id="certifications">
-        <h2>Certifications</h2>
-        <div class="certification-container">
-            <div class="certification-item">
-                <div class="certification-content">
-                    <img src="cert-a.png" alt="Certification 1" class="certification-image" />
-                    <p>UnionBank has partnered with my school and provided us with The Data Science Development Program
-                        certification, which provides in-depth training in Data Science, covering foundational and
-                        advanced topics. The course introduces key concepts in data analysis, machine learning, and
-                        artificial intelligence (AI), while also emphasizing ethical considerations and the business
-                        impact of data science. It includes modules on data preparation, exploratory data analysis,
-                        relational databases, programming languages (Python and SQL)</p>
-                </div>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certifications</h2>
             </div>
-            <div class="certification-item">
-                <div class="certification-content">
-                    <img src="cert-b.png" alt="Certification 2" class="certification-image" />
-                    <p>The FreeCodeCamp Responsive Web Design Certification teaches HTML for content and CSS for design.
-                        It covers basics like creating a cat photo app, advanced topics like CSS variables and
-                        accessibility, and responsive design techniques using Flexbox and CSS Grid for adaptable
-                        webpages.</p>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="cert-a.png" alt="Data Science Certification" class="certification-image">
+                    <div class="certification-content">
+                        <h3>Data Science Development Program</h3>
+                        <p>UnionBank has partnered with my school and provided us with The Data Science Development
+                            Program
+                            certification, which provides in-depth training in Data Science, covering foundational and
+                            advanced topics. The course introduces key concepts in data analysis, machine learning, and
+                            artificial intelligence (AI), while also emphasizing ethical considerations and the business
+                            impact of data science.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="certification-item">
-                <div class="certification-content">
-                    <img src="cert-c.png" alt="Certification 3" class="certification-image" />
-                    <p>This FreeCodeCamp JavaScript Certification covers core concepts like variables, arrays,
-                        functions, the DOM, and advanced topics such as OOP, Functional Programming, algorithmic
-                        thinking, local storage, and API data fetching. It teaches developers to build interactive web
-                        pages and manage data effectively. I am currently progressing onto this certification.</p>
+                <div class="certification-card">
+                    <img src="cert-b.png" alt="Web Design Certification" class="certification-image">
+                    <div class="certification-content">
+                        <h3>Responsive Web Design</h3>
+                        <p>The FreeCodeCamp Responsive Web Design Certification teaches HTML for content and CSS for
+                            design.
+                            It covers basics like creating a cat photo app, advanced topics like CSS variables and
+                            accessibility, and responsive design techniques using Flexbox and CSS Grid for adaptable
+                            webpages.</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <img src="cert-c.png" alt="JavaScript Certification" class="certification-image">
+                    <div class="certification-content">
+                        <h3>JavaScript Algorithms</h3>
+                        <p>This FreeCodeCamp JavaScript Certification covers core concepts like variables, arrays,
+                            functions, the DOM, and advanced topics such as OOP, Functional Programming, algorithmic
+                            thinking, local storage, and API data fetching. It teaches developers to build interactive
+                            web
+                            pages and manage data effectively. I am currently progressing onto this certification.</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <img src="cert-d.png" alt="JavaScript Certification" class="certification-image">
+                    <div class="certification-content">
+                        <h3>Mastering the Coding Design Interview</h3>
+                        <p>I completed an in‑depth Udemy course that focused on core concepts of system design,
+                            scalability, distributed systems, and big data technologies. The course covered key topics
+                            like caching, database sharding, failover strategies, and designing resilient architectures,
+                            along with guidance on approaching technical interviews. It strengthened my understanding of
+                            how large scale systems work and gave me valuable insights into planning and discussing
+                            system designs effectively.</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <img src="cert-e.png" alt="JavaScript Certification" class="certification-image">
+                    <div class="certification-content">
+                        <h3>Essential tools used in Data Science</h3>
+                        <p>I completed a comprehensive course where I learned how to work with SQL, Power BI, Tableau,
+                            and Excel to analyze and visualize data. Through hands‑on projects, I built dashboards,
+                            explored relational databases, and developed practical skills to turn data into clear,
+                            actionable insights.
+
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="reflections" id="reflections">
-        <h2>Reflections</h2>
-        <div class="reflection-details">
-            <p>As I approach the end of my college journey, I am able to reflect on the many experiences that have
-                shaped my growth and development. My degree has provided me with a strong foundation in both technical
-                and soft skills, preparing me for the challenges of the professional world. I have gained a deep
-                understanding of various technologies and their real-world applications, while also honing my critical
-                thinking, problem-solving, and teamwork abilities.</p>
-            <p>Through a combination of academic coursework, extracurricular activities, and hands-on internships, I’ve
-                had the opportunity to apply what I’ve learned in practical settings. These experiences have not only
-                expanded my technical knowledge but also allowed me to develop important skills such as collaboration,
-                communication, and adaptability.</p>
-            <p>As I move forward, I am confident in the skills I’ve acquired and excited for the opportunities that lie
-                ahead. The lessons learned during my time in college have been invaluable in preparing me for a career
-                in the ever-evolving field of technology. I look forward to continuing to grow, learn, and contribute to
-                the industry. I also do believe that school is just a surface level and it is not much compared to when
-                we get into the industry. There are far more standards, processes, and much more to expect after we
-                graduate. And I believe that I myself should continue to learn consistently after school by exploring
-                the things I enjoy in my degree.</p>
-        </div>
-    </section>
+
+
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Bryce Rodulfo</p>
-        <p>Last Updated, Feb 2025</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/brycerodulfo/" target="_blank" class="social-icon facebook"><i
-                    class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/bruhyze/" target="_blank" class="social-icon instagram"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/brycerodulfo/" target="_blank" class="social-icon linkedin"><i
-                    class="fab fa-linkedin-in"></i></a>
-            <a href="https://drive.google.com/drive/u/2/folders/1OM8AIcBzS0T1_QJgEZLsKxxRn1hl3U_V" target="_blank"
-                class="social-icon google-drive"><i class="fab fa-google-drive"></i></a>
+        <div class="container">
+
+            <p class="copyright">© 2025 Bryce Rodulfo. All rights reserved.</p>
+            <p class="copyright">Last Updated: July 2025</p>
         </div>
     </footer>
 </body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    document.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
 
 </html>
