@@ -32,6 +32,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#organizations">Organizations</a>
+                <a href="#projects">Projects</a>
                 <a href="#academics">Academics</a>
                 <a href="#certifications">Certifications</a>
             </div>
@@ -425,6 +426,132 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+
+            <!-- Data Science & Analytics Projects -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-chart-line"></i> Data Science & Analytics
+                </h3>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-bikesales.png" alt="Customer Segmentation Analysis" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Customer Segmentation Analysis</h4>
+                            <p class="project-description">
+                                Developed a customer segmentation model using K-means clustering to identify distinct
+                                customer groups
+                                based on purchasing behavior for a retail company. The analysis helped optimize
+                                marketing strategies.
+                            </p>
+
+                            <div class="project-tools">
+                                <span>Tableau</span>
+                                <span>Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-evanalysis.png" alt="Sales Forecasting Dashboard" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Sales Forecasting Dashboard</h4>
+                            <p class="project-description">
+                                Created a time series forecasting model to predict future sales with 85% accuracy.
+                                Built an interactive Power BI dashboard to visualize trends and predictions.
+                            </p>
+                            <div class="project-tools">
+                                <span>Power BI</span>
+                                <span>Python</span>
+                                <span>Prophet</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Projects -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-code"></i> Web Development
+                </h3>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="web-project-1.jpg" alt="Scholarship Finder Web App" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Scholarship Finder Web App</h4>
+                            <p class="project-description">
+                                Developed a full-stack web application that helps students find suitable scholarships
+                                based on their profile. Features include user authentication, search filters, and
+                                application tracking.
+                            </p>
+                            <div class="project-tools">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Express</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="web-project-2.jpg" alt="E-commerce Dashboard" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>E-commerce Dashboard</h4>
+                            <p class="project-description">
+                                Built an admin dashboard for an e-commerce platform with real-time analytics,
+                                inventory management, and order processing capabilities.
+                            </p>
+                            <div class="project-tools">
+                                <span>JavaScript</span>
+                                <span>Chart.js</span>
+                                <span>Firebase</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
     <!-- Academics Section -->
     <section id="academics" class="bg-dark">
         <div class="container">
@@ -547,6 +674,7 @@
     </footer>
 </body>
 <script>
+    // Hamburger menu functionality
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
 
@@ -556,17 +684,83 @@
         navLinks.classList.toggle('active');
     });
 
-
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         });
     });
+
     document.addEventListener('click', () => {
         if (navLinks.classList.contains('active')) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+        }
+    });
+</script>
+
+<script>
+    // Modal functionality
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Function to open modal
+    function openModal(imgSrc, altText) {
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+        captionText.innerHTML = altText;
+        document.body.style.overflow = "hidden";
+    }
+
+    // First handle the "Click to View" buttons
+    const viewButtons = document.querySelectorAll('.view-btn');
+    viewButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const projectImage = button.closest('.project-image').querySelector('.project-img');
+            openModal(projectImage.src, projectImage.alt);
+        });
+    });
+
+    // Then handle all other clickable images
+    const clickableViewImages = document.querySelectorAll(
+        ".highlight-image img, " +
+        ".experience-gallery img, " +
+        ".organization-logo, " +
+        ".certification-image, " +
+        ".academic-gallery img, " +
+        ".project-img:not(.project-image .project-img)", // Exclude images that already have buttons
+        ".gallery-item img"
+    );
+
+    clickableViewImages.forEach(img => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", () => {
+            openModal(img.src, img.alt);
+        });
+    });
+
+    // Close modal when clicking X
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+
+    // Close modal when clicking outside image
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+
+    // Close modal with ESC key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "block") {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
         }
     });
 </script>
