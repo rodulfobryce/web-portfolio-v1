@@ -5,14 +5,13 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Bryce Rodulfo | Portfolio</title>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main-page.css" />
-    <!-- CSS -->
+
     <style>
 
     </style>
@@ -39,7 +38,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <div class="hero-content">
@@ -57,7 +55,11 @@
                 <div class="hero-image">
                     <img src="1.png" alt="Bryce Rodulfo">
                     <div class="hero-social">
-                        <p>Data Science and Analytics</p>
+                        <div class="social-content">
+                            <p>Data Science and Analytics</p>
+                            <a href="https://drive.google.com/drive/u/2/folders/1OM8AIcBzS0T1_QJgEZLsKxxRn1hl3U_V"
+                                target="_blank" class="resume-btn">Resume and CV</a>
+                        </div>
                         <div class="social-links">
                             <a href="https://www.facebook.com/brycerodulfo/" target="_blank" class="social-link"
                                 data-tooltip="Facebook Profile">
@@ -70,10 +72,6 @@
                             <a href="https://www.linkedin.com/in/brycerodulfo/" target="_blank" class="social-link"
                                 data-tooltip="LinkedIn Profile">
                                 <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://drive.google.com/drive/u/2/folders/1OM8AIcBzS0T1_QJgEZLsKxxRn1hl3U_V"
-                                target="_blank" class="social-link" data-tooltip="Resume and CV">
-                                <i class="fab fa-google-drive"></i>
                             </a>
                         </div>
                     </div>
@@ -353,6 +351,175 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+
+            <!-- Data Science & Analytics Projects -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-chart-line"></i> Data Science & Analytics
+                </h3>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-bikesales.png" alt="Customer Segmentation Analysis" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Bike Sales Analysis </h4>
+                            <p class="project-description">
+                                I built a dashboard that tells the story of the bike sales performance. The profit and
+                                revenue charts highlight overall growth and year‑over‑year trends, while the
+                                top‑products chart quickly shows which items drive the most volume. Sales are broken
+                                down by age group and gender to reveal key customer segments, and a world map pinpoints
+                                strong markets by country. Together, these visuals give clear insights for data‑driven
+                                decisions on product focus and market strategy. Dataset from data.gov
+                            </p>
+
+                            <div class="project-tools">
+                                <span>Tableau</span>
+                                <span>Excel</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-evanalysis.png" alt="Sales Forecasting Dashboard" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Electric Vehicle Analysis</h4>
+                            <p class="project-description">
+                                Built an interactive Tableau dashboard using public data to analyze electric vehicle
+                                ownership across Washington. Visualized insights by make, county, year, and location,
+                                enabling users to explore trends and distribution patterns in EV adoption.
+                            </p>
+                            <div class="project-tools">
+                                <span>Tableau</span>
+                                <span>Excel</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-classicmodels.png" alt="Sales Forecasting Dashboard"
+                                class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Classic Models</h4>
+                            <p class="project-description">
+                                This project showcases a full data pipeline using the popular Classic Models dataset.
+                                Starting with raw .csv data, I used Excel to clean, reformat, and segment the dataset
+                                into logical tables (Customers, Orders, Products). I then loaded the structured data
+                                into MySQL, where I built views and used CTEs to prepare it for reporting.
+
+                                Using an ODBC connection, I integrated the data into Power BI to design an interactive
+                                Sales Dashboard. The dashboard highlights key metrics such as:
+
+                                $9.6M Total Sales
+
+                                326 Unique Orders
+
+                                $29.46K Average Order Value
+
+                                It includes visualizations of sales by product line, country, and region, with
+                                time-series charts and dynamic filters for deeper analysis. This project reflects my
+                                hands-on experience with the ETL process, data modeling, and business intelligence
+                                reporting.
+                            </p>
+                            <div class="project-tools">
+                                <span>PowerBi</span>
+                                <span>Excel</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="dashboard-netflix-overview.png" alt="Sales Forecasting Dashboard"
+                                class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Netflix Content Dashboard</h4>
+                            <p class="project-description">
+                                I built this dashboard to explore trends in Netflix’s global library using a dataset
+                                from Kaggle. It highlights how content grew rapidly around 2018–2019 before slowing
+                                down, with most shows rated for mature audiences (TV-MA, R). International movies and
+                                dramas lead in genre popularity, and Netflix shows strong global coverage across
+                                regions. The design follows Netflix’s visual branding. I also created a single-show
+                                detail view (not shown here).
+                            </p>
+                            <div class="project-tools">
+                                <span>PowerBi</span>
+                                <span>Excel</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Web Development Projects -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-code"></i> Web Development
+                </h3>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="webdev-sj-dashboard.png" alt="Scholarship Finder Web App" class="project-img">
+                            <div class="image-overlay">
+                                <button class="view-btn">Click to View</button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>ScholarJunction</h4>
+                            <p class="project-description">
+                                Built a full-stack web application using the MERN Stack to help students find
+                                scholarships that match their profiles. Key features include user authentication, search
+                                filters, application tracking, and a recommendation system powered by a trie-based
+                                algorithm to suggest relevant scholarships efficiently. The project was professionally
+                                UAT’d by school staff and students from institutions across Metro Manila, including Don
+                                Bosco, PWU, and MIT, as part of academic accreditation.
+                            </p>
+                            <div class="project-tools">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Express</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Organizations Section -->
     <section id="organizations">
         <div class="container">
@@ -426,125 +593,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-dark">
-        <div class="container">
-            <div class="section-title">
-                <h2>Projects</h2>
-            </div>
 
-            <!-- Data Science & Analytics Projects -->
-            <div class="projects-category">
-                <h3 class="category-title">
-                    <i class="fas fa-chart-line"></i> Data Science & Analytics
-                </h3>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="dashboard-bikesales.png" alt="Customer Segmentation Analysis" class="project-img">
-                            <div class="image-overlay">
-                                <button class="view-btn">Click to View</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Customer Segmentation Analysis</h4>
-                            <p class="project-description">
-                                Developed a customer segmentation model using K-means clustering to identify distinct
-                                customer groups
-                                based on purchasing behavior for a retail company. The analysis helped optimize
-                                marketing strategies.
-                            </p>
-
-                            <div class="project-tools">
-                                <span>Tableau</span>
-                                <span>Excel</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="dashboard-evanalysis.png" alt="Sales Forecasting Dashboard" class="project-img">
-                            <div class="image-overlay">
-                                <button class="view-btn">Click to View</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Sales Forecasting Dashboard</h4>
-                            <p class="project-description">
-                                Created a time series forecasting model to predict future sales with 85% accuracy.
-                                Built an interactive Power BI dashboard to visualize trends and predictions.
-                            </p>
-                            <div class="project-tools">
-                                <span>Power BI</span>
-                                <span>Python</span>
-                                <span>Prophet</span>
-                                <span>SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Web Development Projects -->
-            <div class="projects-category">
-                <h3 class="category-title">
-                    <i class="fas fa-code"></i> Web Development
-                </h3>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="web-project-1.jpg" alt="Scholarship Finder Web App" class="project-img">
-                            <div class="image-overlay">
-                                <button class="view-btn">Click to View</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Scholarship Finder Web App</h4>
-                            <p class="project-description">
-                                Developed a full-stack web application that helps students find suitable scholarships
-                                based on their profile. Features include user authentication, search filters, and
-                                application tracking.
-                            </p>
-                            <div class="project-tools">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>Express</span>
-                                <span>Tailwind CSS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="web-project-2.jpg" alt="E-commerce Dashboard" class="project-img">
-                            <div class="image-overlay">
-                                <button class="view-btn">Click to View</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>E-commerce Dashboard</h4>
-                            <p class="project-description">
-                                Built an admin dashboard for an e-commerce platform with real-time analytics,
-                                inventory management, and order processing capabilities.
-                            </p>
-                            <div class="project-tools">
-                                <span>JavaScript</span>
-                                <span>Chart.js</span>
-                                <span>Firebase</span>
-                                <span>Bootstrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Image Modal -->
     <div class="modal" id="imageModal">
@@ -674,39 +723,46 @@
     </footer>
 </body>
 <script>
-    // Hamburger menu functionality
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const body = document.body;
 
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+        // Hamburger click handler
+        hamburger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
         });
-    });
 
-    document.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
+        // Close menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
     });
 </script>
 
 <script>
-    // Modal functionality
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
     const captionText = document.getElementById("caption");
     const closeBtn = document.querySelector(".close-btn");
 
-    // Function to open modal
+
     function openModal(imgSrc, altText) {
         modal.style.display = "block";
         modalImg.src = imgSrc;
@@ -714,7 +770,6 @@
         document.body.style.overflow = "hidden";
     }
 
-    // First handle the "Click to View" buttons
     const viewButtons = document.querySelectorAll('.view-btn');
     viewButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -724,14 +779,13 @@
         });
     });
 
-    // Then handle all other clickable images
     const clickableViewImages = document.querySelectorAll(
         ".highlight-image img, " +
         ".experience-gallery img, " +
         ".organization-logo, " +
         ".certification-image, " +
         ".academic-gallery img, " +
-        ".project-img:not(.project-image .project-img)", // Exclude images that already have buttons
+        ".project-img:not(.project-image .project-img)",
         ".gallery-item img"
     );
 
@@ -756,7 +810,6 @@
         }
     });
 
-    // Close modal with ESC key
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.style.display === "block") {
             modal.style.display = "none";
