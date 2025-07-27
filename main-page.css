@@ -354,6 +354,36 @@ header {
     box-shadow: 0 0 30px rgba(201, 64, 255, 0.5);
 }
 
+.gradient-text {
+    background: linear-gradient(90deg,
+            #7c4dff,
+            #b388ff,
+            #2962ff,
+            #7c4dff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 8s ease infinite;
+    font-weight: 700;
+    position: relative;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 .social-content {
     display: flex;
     flex-direction: column;
@@ -443,9 +473,8 @@ header {
 }
 
 .highlight {
-    color: var(--primary);
-    font-weight: 700;
-    position: relative;
+    background: transparent !important;
+    color: inherit !important;
 }
 
 .highlight::after {
@@ -459,6 +488,11 @@ header {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
+}
+
+.highlight:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .resume-btn {
@@ -1100,6 +1134,13 @@ header {
 }
 
 /* Certifications Section */
+#certifications .section-title p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: var(--text-secondary);
+}
+
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1108,43 +1149,138 @@ header {
 
 .certification-card {
     background: var(--dark-gray);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 .certification-card:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(124, 77, 255, 0.2);
     border-color: rgba(124, 77, 255, 0.3);
+}
+
+.certification-header {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
 }
 
 .certification-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certification-card:hover .certification-image {
+    transform: scale(1.05);
+}
+
+.certification-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-badge {
+    background: var(--secondary);
 }
 
 .certification-content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .certification-content h3 {
-    position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: white;
 }
 
-.certification-content h3::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: var(--primary);
+.certification-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--primary-light);
+}
+
+.certification-provider {
+    font-weight: 500;
+}
+
+.certification-date {
+    color: var(--text-secondary);
+}
+
+.certification-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+.certification-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.certification-tags .tag {
+    background: rgba(124, 77, 255, 0.1);
+    color: var(--primary-light);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(124, 77, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* This is the fixed part - only affects the specific tag being hovered */
+.certification-tags .tag:hover {
+    background: rgba(124, 77, 255, 0.2);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-header {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification-header {
+        height: 140px;
+    }
+
+    .certification-content {
+        padding: 1.25rem;
+    }
 }
 
 /* Footer */
